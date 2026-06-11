@@ -238,9 +238,9 @@ header {
 }
 .jewelry-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 40px 0;
 }
 .jewelry-card {
     background: #1a1a1a;
@@ -269,36 +269,61 @@ header {
 .jewelry-card:hover .jewelry-image img {
     transform: scale(1.05);
 }
+/* Новые стили для карточек украшений */
 .jewelry-specs {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
-    margin: 20px 15px 15px;
+    margin: 15px 15px 10px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
+
 .spec-badge {
     background: #2a2a2a;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #ccc;
 }
-.spec-badge.titanium {
-    background: #2a2a4a;
-    color: #88aaff;
-    border: 1px solid #3a3a6a;
+
+.spec-badge.size {
+    background: #ff3b6f;
+    color: white;
 }
+
 .spec-badge.standard {
     background: #2a3a2a;
     color: #88ffaa;
 }
-.jewelry-desc {
+
+.spec-stone {
     font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ffd89b, #ff3b6f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 8px 16px;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.jewelry-desc {
+    font-size: 13px;
     color: #bbb;
-    padding: 0 15px 10px;
+    padding: 0 12px 15px;
     line-height: 1.4;
+    text-align: center;
 }
 .partner-block {
     text-align: center;
@@ -548,6 +573,175 @@ footer h4::after {
     color: #666;
 }
 
+/* ===== ПРАЙС-ЛИСТ ===== */
+.prices-section {
+    padding: 80px 0;
+    background: linear-gradient(145deg, #0a0a0a, #0f0f0f);
+}
+
+.prices-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.prices-section h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.prices-subtitle {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Левая колонка — список услуг */
+.services-list {
+    background: #111;
+    border-radius: 28px;
+    padding: 30px;
+    border: 1px solid #2a2a2a;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    transition: 0.2s;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-item:hover {
+    transform: translateX(5px);
+}
+
+.service-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.service-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff3b6f;
+}
+
+.service-item.highlight {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #ff3b6f;
+    border-bottom: none;
+}
+
+.service-item.highlight .service-name {
+    color: #ff3b6f;
+    font-weight: 600;
+}
+
+/* Правая колонка — информация */
+.prices-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card, .discount-card {
+    background: #111;
+    border-radius: 28px;
+    padding: 30px;
+    border: 1px solid #2a2a2a;
+}
+
+.info-card h3, .discount-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.discount-card {
+    background: linear-gradient(135deg, #1a0f0f, #0f0a0a);
+    border: 1px solid #ff3b6f;
+    text-align: center;
+}
+
+.discount-card p {
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.discount-card strong {
+    color: #ff3b6f;
+    font-size: 24px;
+}
+
+.discount-note {
+    font-size: 13px !important;
+    color: #888 !important;
+    margin-top: 15px !important;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .prices-section h2 {
+        font-size: 32px;
+    }
+    
+    .prices-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .service-name, .service-price {
+        font-size: 16px;
+    }
+    
+    .service-price {
+        font-size: 18px;
+    }
+    
+    .info-card h3, .discount-card h3 {
+        font-size: 20px;
+    }
+    
+    .info-card li {
+        font-size: 14px;
+    }
+    
+    .discount-card p {
+        font-size: 16px;
+    }
+    
+    .discount-card strong {
+        font-size: 20px;
+    }
+}
+
 /* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
 @media (max-width: 768px) {
     .menu {
@@ -595,7 +789,7 @@ footer h4::after {
     }
     
     .jewelry-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* на телефоне — 1 карточка в ряд */
         gap: 25px;
     }
     .jewelry-showcase h2 {
@@ -658,6 +852,12 @@ footer h4::after {
     }
     .footer-contacts {
         text-align: center;
+    }
+}
+
+    @media (max-width: 992px) and (min-width: 769px) {
+    .jewelry-grid {
+        grid-template-columns: repeat(2, 1fr);  /* на планшете — 2 карточки */
     }
 }
 
