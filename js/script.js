@@ -172,18 +172,15 @@ if (document.getElementById('reviewsWrapper')) {
 // ===== ПОРТФОЛИО - ГАЛЕРЕЯ РАБОТ =====
 // Укажите названия ваших файлов (фото должны лежать в папке images)
 const portfolioImages = [
-    { src: "images/work1.jpg", alt: "Первичный прокол брови" },
-    { src: "images/work2.jpg", alt: "Вторичный прокол брови" },
-    { src: "images/work3.jpg", alt: "Прокол брови" },
+    { src: "images/work1.jpg", alt: "Прокол брови" },
+    { src: "images/work2.jpg", alt: "Прокол брови" },
+    { src: "images/work3.jpg", alt: "Прокол уха" },
     { src: "images/work4.jpg", alt: "Прокол уха" },
-    { src: "images/work5.jpg", alt: "Прокол уха" },
+    { src: "images/work5.jpg", alt: "Прокол пупок" },
     { src: "images/work6.jpg", alt: "Прокол уха" },
-    { src: "images/work7.jpg", alt: "Первичный прокол пупка" },
-    { src: "images/work8.jpg", alt: "Вторичный прокол пупка" },
-    { src: "images/work9.jpg", alt: "Прокол уха" },
-    { src: "images/work10.jpg", alt: "Септум" },
-    { src: "images/work11.jpg", alt: "Прокол носа" },
-    { src: "images/work12.jpg", alt: "Прокол уха" }
+    { src: "images/work7.jpg", alt: "Септум" },
+    { src: "images/work8.jpg", alt: "Прокол носа" },
+    { src: "images/work9.jpg", alt: "Прокол уха" }
 ];
 
 function renderPortfolio() {
