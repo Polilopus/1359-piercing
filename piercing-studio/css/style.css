@@ -682,63 +682,107 @@ footer h4::after {
     line-height: 1.4;
 }
 
+/* Карточка акции */
 .discount-card {
-    background: linear-gradient(135deg, #1a0f0f, #0f0a0a);
-    border: 1px solid #ff3b6f;
+    background: linear-gradient(135deg, #1a0a0f, #0f0a0a);
+    border: 2px solid #ff3b6f;
+    border-radius: 28px;
+    padding: 35px 30px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.discount-card p {
-    font-size: 18px;
-    color: #eee;
-    margin-bottom: 10px;
-    line-height: 1.5;
+.discount-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 59, 111, 0.05), transparent 70%);
+    animation: pulseGlow 4s ease-in-out infinite;
 }
 
-.discount-card strong {
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.discount-card h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.discount-offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.discount-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-big {
+    font-size: 40px;
+    font-weight: 900;
     color: #ff3b6f;
-    font-size: 24px;
+    line-height: 1.1;
+    text-shadow: 0 0 20px rgba(255, 59, 111, 0.3);
+}
+
+.discount-label {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.discount-divider {
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #ff3b6f, transparent);
 }
 
 .discount-note {
     font-size: 13px !important;
     color: #888 !important;
-    margin-top: 15px !important;
+    margin-top: 20px !important;
+    position: relative;
+    z-index: 1;
 }
 
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
-    .prices-section h2 {
+    .discount-card {
+        padding: 25px 20px;
+    }
+    
+    .discount-card h3 {
+        font-size: 22px;
+    }
+    
+    .discount-big {
         font-size: 32px;
     }
     
-    .prices-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .discount-offer {
+        gap: 15px;
     }
     
-    .service-name, .service-price {
-        font-size: 16px;
-    }
-    
-    .service-price {
-        font-size: 18px;
-    }
-    
-    .info-card h3, .discount-card h3 {
-        font-size: 20px;
-    }
-    
-    .info-card li {
-        font-size: 14px;
-    }
-    
-    .discount-card p {
-        font-size: 16px;
-    }
-    
-    .discount-card strong {
-        font-size: 20px;
+    .discount-divider {
+        height: 40px;
     }
 }
 
@@ -858,6 +902,89 @@ footer h4::after {
     @media (max-width: 992px) and (min-width: 769px) {
     .jewelry-grid {
         grid-template-columns: repeat(2, 1fr);  /* на планшете — 2 карточки */
+    }
+}
+
+
+/* ===== ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ (до 400px) ===== */
+@media (max-width: 400px) {
+    .discount-card {
+        padding: 20px 12px;
+    }
+    
+    .discount-card h3 {
+        font-size: 17px;
+    }
+    
+    .discount-big {
+        font-size: 22px;
+    }
+    
+    .discount-label {
+        font-size: 11px;
+    }
+    
+    .discount-divider {
+        height: 30px;
+    }
+    
+    .discount-offer {
+        gap: 8px;
+    }
+}
+
+/* ===== АДАПТИВ ДЛЯ ПРАЙС-ЛИСТА ===== */
+@media (max-width: 768px) {
+    .prices-section h2 {
+        font-size: 32px;
+    }
+    
+    .prices-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Список услуг — делаем компактным */
+    .services-list {
+        padding: 20px 15px;
+    }
+    
+    .service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    
+    .service-name {
+        font-size: 15px;
+        font-weight: 500;
+        color: #ddd;
+        flex: 1;
+        min-width: 0;
+        word-break: break-word;
+    }
+    
+    .service-price {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ff3b6f;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* Инфо-карточки */
+    .info-card, .discount-card {
+        padding: 20px;
+    }
+    
+    .info-card h3, .discount-card h3 {
+        font-size: 20px;
+    }
+    
+    .info-card li {
+        font-size: 14px;
     }
 }
 
