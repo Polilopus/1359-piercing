@@ -1296,3 +1296,23 @@ footer h4::after {
     color: #777;
     border-top-color: #D2B48C;
 }
+
+
+/* Дополнительный текст об окончании акции */
+.discount-validity {
+    font-size: 18px;
+    font-weight: 700;
+    color: #B87333; /* терракотовый, можно подобрать свой */
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.5px;
+}
+
+/* Адаптив для телефона */
+@media (max-width: 768px) {
+    .discount-validity {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+}
