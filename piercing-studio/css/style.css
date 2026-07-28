@@ -1012,3 +1012,287 @@ img {
     max-height: 500px;
     object-fit: cover;
 }
+
+
+/* ============================================================
+   НОВАЯ БЕЖЕВАЯ ТЕМА (переопределение цветов)
+   ============================================================ */
+
+/* Основной фон и текст */
+body {
+    background: #FAF0E6;
+    color: #3D2B1F;
+}
+
+.container {
+    /* фон не меняем, он прозрачный */
+}
+
+/* Шапка */
+header {
+    background: #FAF0E6;
+    border-bottom: 1px solid #D2B48C;
+}
+.logo {
+    color: #3D2B1F;
+}
+.menu a {
+    color: #3D2B1F;
+}
+.menu a:hover {
+    color: #B87333; /* терракотовый */
+}
+
+/* Кнопки (розовый → терракотовый) */
+.btn-small,
+.btn-primary {
+    background: #B87333;
+}
+.btn-small:hover,
+.btn-primary:hover {
+    background: #9E6B2C;
+}
+
+/* Секции */
+.master-story,
+.portfolio,
+.jewelry-showcase,
+.reviews-section,
+.prices-section,
+footer {
+    background: #FAF0E6;
+}
+
+/* История мастера */
+.story-grid {
+    /* без изменений */
+}
+.story-content h1 {
+    color: #3D2B1F;
+}
+.story-intro {
+    color: #5A3E2B;
+    border-left-color: #B87333;
+}
+.story-intro p {
+    color: #5A3E2B;
+}
+.stat-fact {
+    background: #F0E0D0;
+}
+.stat-fact .stat-number {
+    color: #B87333;
+}
+.stat-fact .stat-label {
+    color: #5A3E2B;
+}
+.story-philosophy {
+    color: #5A3E2B;
+}
+.dream-quote {
+    color: #3D2B1F;
+}
+
+/* Портфолио */
+.portfolio h2 {
+    color: #3D2B1F;
+}
+.portfolio-subtitle {
+    color: #5A3E2B;
+}
+.portfolio-note {
+    color: #B87333;
+}
+.portfolio-item {
+    background: #F0E0D0;
+}
+.portfolio-item img {
+    /* без изменений */
+}
+.portfolio-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.portfolio-overlay p {
+    color: #fff;
+}
+
+/* Украшения */
+.jewelry-showcase h2 {
+    color: #3D2B1F;
+}
+.jewelry-tagline {
+    color: #5A3E2B;
+}
+.jewelry-card {
+    background: #F5E6D3;
+}
+.spec-badge {
+    background: #D2B48C;
+    color: #3D2B1F;
+}
+.spec-badge.size {
+    background: #B87333;
+    color: #fff;
+}
+.spec-badge.standard {
+    background: #8FBC8F;
+    color: #2F4F2F;
+}
+.spec-stone {
+    background: linear-gradient(135deg, #D2B48C, #B87333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.jewelry-desc {
+    color: #5A3E2B;
+}
+
+/* Прайс-лист */
+.prices-section h2 {
+    color: #3D2B1F;
+}
+.prices-subtitle {
+    color: #5A3E2B;
+}
+.services-list {
+    background: #F5E6D3;
+    border-color: #D2B48C;
+}
+.service-item {
+    border-bottom-color: #D2B48C;
+}
+.service-name {
+    color: #3D2B1F;
+}
+.service-price {
+    color: #B87333;
+}
+.service-item.highlight {
+    border-top-color: #B87333;
+}
+.service-item.highlight .service-name {
+    color: #B87333;
+}
+.info-card,
+.discount-card {
+    background: #F5E6D3;
+    border-color: #D2B48C;
+}
+.info-card h3,
+.discount-card h3 {
+    color: #3D2B1F;
+}
+.info-card li {
+    color: #5A3E2B;
+}
+
+/* Акция */
+.discount-card {
+    background: linear-gradient(135deg, #F5E6D3, #EDD8C0);
+    border-color: #B87333;
+}
+.discount-card::before {
+    background: radial-gradient(circle at center, rgba(184, 115, 51, 0.08), transparent 70%);
+}
+.discount-card h3 {
+    color: #3D2B1F;
+}
+.discount-big {
+    color: #B87333;
+    text-shadow: 0 0 20px rgba(184, 115, 51, 0.3);
+}
+.discount-label {
+    color: #5A3E2B;
+}
+.discount-divider {
+    background: linear-gradient(to bottom, transparent, #B87333, transparent);
+}
+.discount-note {
+    color: #888 !important;
+}
+
+/* Отзывы */
+.reviews-section h2 {
+    color: #3D2B1F;
+}
+.reviews-subtitle {
+    color: #5A3E2B;
+}
+.carousel-btn {
+    background: #B87333;
+}
+.carousel-btn:hover {
+    background: #9E6B2C;
+}
+.review-content {
+    background: #F5E6D3;
+    border-left-color: #B87333;
+}
+.review-rating {
+    color: #D4A017;
+}
+.review-text {
+    color: #3D2B1F;
+}
+.review-author {
+    color: #B87333;
+}
+.review-date {
+    color: #888;
+}
+.dot {
+    background: #D2B48C;
+}
+.dot.active {
+    background: #B87333;
+}
+
+/* Подвал */
+footer {
+    background: #E8D5C0;
+    border-top-color: #D2B48C;
+}
+footer h4 {
+    color: #3D2B1F;
+}
+footer h4::after {
+    background: #B87333;
+}
+.footer-contacts p {
+    color: #3D2B1F;
+}
+.footer-contacts a {
+    color: #3D2B1F;
+}
+.footer-contacts a:hover {
+    color: #B87333;
+}
+.social-link {
+    background: #D2B48C;
+    color: #3D2B1F;
+}
+.social-link:hover {
+    background: #C4A07A;
+}
+.social-link.vk:hover,
+.social-link.tg:hover,
+.social-link.ig:hover {
+    color: #B87333;
+}
+.social-img {
+    filter: none; /* убираем инверсию, т.к. фон светлый */
+}
+.footer-menu a {
+    color: #3D2B1F;
+}
+.footer-menu a:hover {
+    color: #B87333;
+}
+.work-hours {
+    color: #777;
+}
+.copyright {
+    color: #777;
+    border-top-color: #D2B48C;
+}
